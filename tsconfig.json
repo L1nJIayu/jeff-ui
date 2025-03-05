@@ -1,24 +1,29 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "target": "es2018",
-    "module": "esnext",
-    "baseUrl": ".",
-    "sourceMap": false,
-    "moduleResolution": "node",
-    "allowJs": false,
-    "strict": true,
-    "noUnusedLocals": true,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "removeComments": false,
-    "rootDir": ".",
-    "types": [],
-    "paths": {
-      // "@element-plus/*": ["packages/*"],
-      // "element-plus": ["packages/element-plus"]
-    },
-    "preserveSymlinks": true
-  }
+      "module": "ESNext", // 指定打包模块类型为ESNext，紧跟现代JavaScript模块化规范
+      "declaration": false, // 默认为不生成声明文件，减少不必要的文件输出
+      "noImplicitAny": true, // 严禁未声明类型的变量，增强代码的类型安全性
+      "removeComments": true, // 编译时自动删除注释，精简代码体积
+      "moduleResolution": "node", // 按照Node.js的模块解析规则进行模块查找
+      "esModuleInterop": true, // 支持ES6模块与CommonJS模块的互操作性
+      "jsx": "preserve", // 保留JSX语法，方便在Vue组件中使用JSX进行视图编写
+      "noLib": false, // 正常处理类库，确保项目依赖的各类库文件能被正确解析
+      "target": "ES6", // 以ES6标准为目标编译代码，保证代码在主流环境中的兼容性
+      "sourceMap": true, // 生成source - map文件，方便调试时定位原始代码位置
+      "lib": [
+          "ESNext",
+          "DOM"
+      ], // 指定编译时使用的库，涵盖最新的JavaScript特性与DOM相关功能
+      "allowSyntheticDefaultImports": true, // 允许从没有默认导出的模块中进行默认导入
+      "experimentalDecorators": true, // 启用装饰器特性，为代码编写提供更优雅的方式
+      "forceConsistentCasingInFileNames": true, // 强制文件名大小写一致，避免因大小写问题导致的模块加载错误
+      "resolveJsonModule": true, // 支持解析JSON模块，方便引入和使用JSON数据
+      "strict": true, // 启用严格模式，全面提升代码的严谨性和可靠性
+      "skipLibCheck": true // 跳过类库检测，加快编译速度
+  },
+  "exclude": [
+      "node_modules",
+      "**/__tests__",
+      "dist/**"
+  ] // 明确排除不需要编译的文件和目录，提高编译效率
 }
