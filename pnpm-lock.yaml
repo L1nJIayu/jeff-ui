@@ -22,6 +22,10 @@ importers:
 
   packages/hooks: {}
 
+  packages/theme: {}
+
+  packages/types: {}
+
   packages/utils:
     dependencies:
       vue:

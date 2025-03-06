@@ -5,6 +5,7 @@ export const componentInstall = (components) => {
   }
   return components
 }
+
 // import { App, type Plugin } from "vue";
 
 // export const componentInstall = <T extends Record<string, any>>(components: T & Plugin) => {
