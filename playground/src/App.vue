@@ -1,6 +1,6 @@
 <template>
   <div>
-    <JeButton>按钮</JeButton>
+    <JeButton type="primary" size="large" color="green">按钮</JeButton>
   </div>
 </template>
 

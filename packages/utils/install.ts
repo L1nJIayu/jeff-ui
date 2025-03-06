@@ -1,20 +1,10 @@
+import type { App, Plugin } from 'vue'
 
-export const componentInstall = (components) => {
-  components.install = (app) => {
-    app.component(app.name, components)
+export type SFCWithInstall<T> = T & Plugin
+ 
+export const withInstall = <T>(comp: T) => {
+  (comp as SFCWithInstall<T>).install = (app: App) => {
+    app.component((comp as any).name, comp as SFCWithInstall<T>)
   }
-  return components
+  return comp as SFCWithInstall<T>
 }
-
-// import { App, type Plugin } from "vue";
-
-// export const componentInstall = <T extends Record<string, any>>(components: T & Plugin) => {
-//   components.install = (app: App) => {
-//     for (const key in components) {
-//       if (components[key] && components[key].name) {
-//         app.component(components[key].name, components[key]);
-//       }
-//     }
-//   };
-//   return components;
-// };

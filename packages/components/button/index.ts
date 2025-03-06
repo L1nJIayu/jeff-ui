@@ -1,7 +1,6 @@
-import { componentInstall } from '@jeff-ui/utils'
-import Button from './src/index.vue'
+import { withInstall } from '@jeff-ui/utils'
+import Button from './src/Button.vue'
 
-// 按需加载
-export const JeButton = componentInstall(Button)
+export const JeButton = withInstall(Button)
 
 export default JeButton
