@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "JeffUI组件库",
   "scripts": {
-    "dev": "pnpm -C playground run dev"
+    "dev": "pnpm -C playground run dev",
+    "build": "gulp -f ./build/gulpfile.ts"
   },
   "keywords": [
     "JeffUI"
@@ -11,15 +12,18 @@
   "author": "Jeffrey",
   "license": "MIT",
   "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab",
-  "devDependencies": {
+  "dependencies": {
     "@jeff-ui/components": "workspace:*",
     "@jeff-ui/hooks": "workspace:*",
     "@jeff-ui/theme-chalk": "workspace:*",
     "@jeff-ui/utils": "workspace:*",
-    "gulp": "^5.0.0",
-    "sass": "^1.85.1"
-  },
-  "dependencies": {
     "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.17",
+    "gulp": "^5.0.0",
+    "sass": "^1.85.1",
+    "sucrase": "^3.35.0",
+    "typescript": "~5.7.2"
   }
 }
