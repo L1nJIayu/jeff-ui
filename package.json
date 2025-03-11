@@ -14,7 +14,8 @@
   "devDependencies": {
     "@jeff-ui/components": "workspace:*",
     "@jeff-ui/hooks": "workspace:*",
-    "@jeff-ui/utils": "workspace:*"
+    "@jeff-ui/utils": "workspace:*",
+    "gulp": "^5.0.0"
   },
   "dependencies": {
     "vue": "^3.5.13"
