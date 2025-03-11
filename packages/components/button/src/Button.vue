@@ -23,11 +23,12 @@ const buttonStyle = computed(() => {
 
 </script> -->
 <template>
-  <div>
-    <button :style="style">
-      <slot></slot>
-    </button>
-  </div>
+  <button
+    class="je-button"
+    :class="className"
+    :style="style">
+    <slot></slot>
+  </button>
 </template>
 
 <script setup lang="ts">
@@ -40,22 +41,13 @@ defineOptions({
 const props = defineProps(buttonProps)
 
 const style = computed(() => {
-  return {
-    ...(
-      props.type ? props.type === 'primary'
-        ? { 'background-color': '#409eff'}
-        : props.type === 'success'
-        ? { 'background-color': '#67c23a'}
-        : props.type === 'warning'
-        ? { 'background-color': '#e6a23c'}
-        : props.type === 'info'
-        ? { 'background-color': '#909399'}
-        : props.type === 'danger'
-        ? { 'background-color': '#f56c6c'}
-        : {}
-      : {}
-    )
-  }
+  return {}
+})
+
+const className = computed(() => {
+  const cName = `je-button--${props.type}`
+  return cName
+
 })
 
 </script>

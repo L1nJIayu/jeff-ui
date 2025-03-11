@@ -1,1 +1,45 @@
 @use './mixins/mixins.scss' as *;
+
+
+  
+[class*='#{$namespace}-button'] {
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  padding: 8px 15px;
+  background-color: #FFF;
+  border: 1px solid #dcdfe6;
+  color: #000;
+  cursor: pointer;
+  font-size: 14px;
+}
+[class*='#{$namespace}-button']:hover {
+  opacity: .8;
+}
+
+
+[class*='#{$namespace}-button--primary'] {
+  border: 0;
+  color: #FFF;
+  background-color: #409eff;
+}
+[class*='#{$namespace}-button--success'] {
+  border: 0;
+  color: #FFF;
+  background-color: #67c23a;
+}
+[class*='#{$namespace}-button--warning'] {
+  border: 0;
+  color: #FFF;
+  background-color: #e6a23c;
+}
+[class*='#{$namespace}-button--info'] {
+  border: 0;
+  color: #FFF;
+  background-color: #909399;
+}
+[class*='#{$namespace}-button--danger'] {
+  border: 0;
+  color: #FFF;
+  background-color: #f56c6c;
+}
