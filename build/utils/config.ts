@@ -3,14 +3,14 @@ import path from 'path'
 
 export const buildConfig = {
   esm: {
-    module: 'ESNext',
-    format: 'esm',
+    module: 'ESNext',   // tsconfig输出的结果
+    format: 'esm',      // 格式化后的模块规范
     output: {
-      name: 'es',
-      path: path.resolve(outDir, 'es')
+      name: 'es',       // 输出后的文件夹名
+      path: path.resolve(outDir, 'es')  // 输出路径
     },
     bundle: {
-      path: 'je-ui/es'
+      path: 'jeff-ui/es'
     }
   },
   cjs: {
@@ -21,7 +21,7 @@ export const buildConfig = {
       path: path.resolve(outDir, 'lib')
     },
     bundle: {
-      path: 'je-ui/lib'
+      path: 'jeff-ui/lib'
     }
   }
 }
