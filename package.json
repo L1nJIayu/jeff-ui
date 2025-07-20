@@ -17,6 +17,7 @@
     "@jeff-ui/hooks": "workspace:*",
     "@jeff-ui/theme-chalk": "workspace:*",
     "@jeff-ui/utils": "workspace:*",
+    "element-plus": "^2.10.4",
     "vue": "^3.5.13"
   },
   "devDependencies": {
@@ -25,6 +26,7 @@
     "@types/gulp-clean-css": "^4.3.4",
     "@types/gulp-sass": "^5.0.4",
     "@types/sass": "^1.45.0",
+    "cross-env": "^7.0.3",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-clean-css": "^4.3.0",

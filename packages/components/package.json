@@ -2,8 +2,11 @@
   "name": "@jeff-ui/components",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
+    "build:es": "cross-env BUILD_FORMAT=es vite build",
+    "build:cjs": "cross-env BUILD_FORMAT=cjs vite build",
+    "build": "pnpm build:es && pnpm build:cjs"
   },
   "keywords": [],
   "author": "",
