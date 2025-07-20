@@ -4,7 +4,11 @@ import gulpSass from 'gulp-sass'
 import GulpAutoPrefixer from 'gulp-autoprefixer'
 import cleanCSS from 'gulp-clean-css'
 import path from 'path'
+import { run } from '../../build/utils'
 
+async function removeDist() {
+  run('rm -rf dist', __dirname)
+}
 function compile() {
   const sass = gulpSass(dartSass)
   return src(path.resolve(__dirname, './src/*.scss'))
@@ -28,5 +32,6 @@ function copyFullFiles() {
 export default series(
   compile,
   copyFonts,
-  copyFullFiles
+  copyFullFiles,
+  removeDist
 )
