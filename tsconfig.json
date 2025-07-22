@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    
+    // "target": "ES2020",
+    // "module": "CommonJS",
+
       "module": "ESNext", // 指定打包模块类型为ESNext，紧跟现代JavaScript模块化规范
       "declaration": false, // 默认为不生成声明文件，减少不必要的文件输出
       "noImplicitAny": true, // 严禁未声明类型的变量，增强代码的类型安全性

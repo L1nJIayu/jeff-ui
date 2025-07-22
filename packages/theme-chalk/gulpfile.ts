@@ -4,10 +4,10 @@ import gulpSass from 'gulp-sass'
 import GulpAutoPrefixer from 'gulp-autoprefixer'
 import cleanCSS from 'gulp-clean-css'
 import path from 'path'
-import { run } from '../../build/utils'
+import {rimraf} from 'rimraf'
 
 async function removeDist() {
-  run('rm -rf dist', __dirname)
+  await rimraf(path.resolve(__dirname, './dist'))
 }
 function compile() {
   const sass = gulpSass(dartSass)

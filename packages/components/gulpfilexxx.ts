@@ -1,5 +1,5 @@
 import { series } from "gulp"
-import { withTaskName } from "../../build/utils"
+import { withTaskName } from "../../internal/utils"
 
 export default series(
   withTaskName("build:components", async () => {

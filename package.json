@@ -4,10 +4,13 @@
   "description": "JeffUI组件库",
   "scripts": {
     "dev": "pnpm -C playground run dev",
-    "build": "gulp -f ./build/gulpfile.ts"
+    "build": "gulp --require=ts-node/esm -f ./internal/gulpfile.ts"
   },
   "keywords": [
     "JeffUI"
+  ],
+  "files": [
+    "dist"
   ],
   "author": "Jeffrey",
   "license": "MIT",
@@ -32,8 +35,10 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^6.0.1",
     "gulp-typescript": "6.0.0-alpha.1",
+    "rimraf": "^6.0.1",
     "sass": "^1.85.1",
     "sucrase": "^3.35.0",
+    "ts-node": "^10.9.2",
     "typescript": "~5.7.2"
   }
 }
